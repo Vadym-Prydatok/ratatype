@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="keyboard trainer" />
+    <meta name="keywords" content="Ratatype, keyboard trainer" />
+    <title>Ratatype</title>
+  </head>
+  <body>
+    <header>
+      <div
+        class="container mx-auto pt-[10px] mb-[30px] flex justify-center xl:pt-5 xl:mb-[50px]"
+      >
+        <a href="/" id="logo">
+          <img src="img/svg/logo.svg" alt="Logo of the company" />
+        </a>
+      </div>
+    </header>
+    <main
+      class="flex justify-center text-lg text-center text-textPrimary font-Manrope xl:text-xl"
+    >
+      <div class="container">
+        <section class="flex flex-col gap-y-[15px] xl:gap-y-5 max-w-[510px] m-auto">
+          <div class="relative flex justify-center h-[100px]">
+            <img
+              id="bg_star"
+              class="absolute"
+              src="img/star/bg.svg"
+              alt="bg star"
+            />
+            <img
+              id="star"
+              class="absolute"
+              src="img/star/star.svg"
+              alt="star"
+            />
+            <img
+              id="hand_star"
+              class="absolute"
+              src="img/star/hand.svg"
+              alt="greet star"
+            />
+          </div>
+
+          <h1 class="text-2xl font-extrabold xl:text-3xl">Увійти</h1>
+
+          <button
+            class="h-[49px] xl:h-[54px] rounded-[10px] border-2 border-brandPrimary flex gap-x-[5px] 
+            items-center justify-center border-b-[6px] hover:bg-brandPrimary duration-300 transition-colors"
+          >
+            <img src="img/svg/google.svg" alt="google_icon" />
+            <span class="font-bold text-[17px] leading-[25px] xl:text-xl"
+              >Google</span
+            >
+          </button>
+          <span>або</span>
+
+          <form class="flex flex-col gap-y-[15px] xl:gap-5 border-otherRed" id="loginForm">
+            <div>
+              <label
+                id="emailLabel"
+                for="email"
+                class="flex flex-col px-[15px] py-[9px] rounded-[10px] bg-bgSecondary h-[60px] xl:h-[70px] border-borderPrimary border-2 justify-center mb-[5px]"
+              >
+                <span
+                  id="emailPlaceholder"
+                  class="absolute text-left duration-300 text-textSecondary"
+                  >Ел. пошта</span
+                >
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="bg-transparent text-otherBlack"
+                />
+              </label>
+              <p
+                id="emailError"
+                class="hidden text-sm text-left xl:text-base text-otherRed"
+              >
+                Вкажіть вашу ел. пошту
+              </p>
+            </div>
+
+            <div class="text-left">
+              <label
+                id="passwordLabel"
+                for="password"
+                class="flex flex-col px-[15px] py-[9px] rounded-[10px] bg-bgSecondary h-[60px] xl:h-[70px] border-borderPrimary border-2 justify-center mb-[5px]"
+              >
+                <span
+                  id="passwordPlaceholder"
+                  class="absolute text-left duration-300 text-textSecondary"
+                  >Пароль</span
+                >
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="bg-transparent text-otherBlack"
+                />
+              </label>
+              <p
+                id="passwordError"
+                class="hidden text-sm xl:text-base text-otherRed"
+              >
+                Пароль має бути не менше 3 символів
+              </p>
+              <a
+                href="/"
+                class="text-sm transition-colors duration-300 xl:text-base text-textSecondary hover:text-otherBlack"
+                >Не пам'ятаєш пароль?</a
+              >
+            </div>
+
+            <button
+              id="submitButton"
+              type="submit"
+              class="font-bold text-[17px] leading-[25px] xl:text-xl rounded-[10px] bg-otherLightYellow h-[49px] xl:h-[54px] border-2 border-otherYellow border-b-[6px] hover:bg-otherYellow duration-300 transition-colors"
+            >
+              Увійти
+            </button>
+          </form>
+
+          <div class="text-[17px] leading-[25px] xl:text-xl">
+            <span>Ще не з нами?</span
+            ><a
+              href="/"
+              class="font-bold pl-[5px] hover:text-textSecondary duration-300 transition-colors"
+              >Зареєструватися</a
+            >
+          </div>
+        </section>
+      </div>
+      <div
+        id="request-popup"
+        class="fixed flex-col items-start hidden p-1 text-sm rounded right-8 bottom-8 bg-lightBrandPrimary"
+      >
+        <h1>Відправленні дані</h1>
+        <span></span>
+        <span></span>
+      </div>
+    </main>
+    <script type="module" src="/src/script/animation.js"></script>
+    <script type="module" src="/src/script/main.js"></script>
+  </body>
+</html>
